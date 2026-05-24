@@ -106,3 +106,4 @@ C:\Users\macak\CalculatorDemo.Api\CalculatorDemo.UnitTests\obj\Debug\net10.0\ref
 C:\Users\macak\CalculatorDemo.Api\CalculatorDemo.UnitTests\obj\Debug\net10.0\CalculatorDemo.UnitTests.pdb
 C:\Users\macak\CalculatorDemo.Api\CalculatorDemo.UnitTests\obj\Debug\net10.0\CalculatorDemo.UnitTests.genruntimeconfig.cache
 C:\Users\macak\CalculatorDemo.Api\CalculatorDemo.UnitTests\obj\Debug\net10.0\ref\CalculatorDemo.UnitTests.dll
+C:\Users\macak\CalculatorDemo.Api\CalculatorDemo.UnitTests\obj\Debug\net10.0\CalculatorDemo.UnitTests.sourcelink.json

@@ -31,3 +31,4 @@ C:\Users\macak\CalculatorDemo.Api\CalculatorDemo.Api\obj\Debug\net10.0\refint\Ca
 C:\Users\macak\CalculatorDemo.Api\CalculatorDemo.Api\obj\Debug\net10.0\CalculatorDemo.Api.pdb
 C:\Users\macak\CalculatorDemo.Api\CalculatorDemo.Api\obj\Debug\net10.0\CalculatorDemo.Api.genruntimeconfig.cache
 C:\Users\macak\CalculatorDemo.Api\CalculatorDemo.Api\obj\Debug\net10.0\ref\CalculatorDemo.Api.dll
+C:\Users\macak\CalculatorDemo.Api\CalculatorDemo.Api\obj\Debug\net10.0\CalculatorDemo.Api.sourcelink.json
