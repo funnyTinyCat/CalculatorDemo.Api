@@ -3,7 +3,24 @@
 namespace CalculatorDemo.UnitTests;
 
 public class CalculatorFixture
-{
+{   
+    private Calculator? _SystemUnderTest;
+    public Calculator SystemUnderTest
+    {
+        get
+        {
+            if (_SystemUnderTest == null)
+            {
+                _SystemUnderTest = new Calculator();
+            }
+
+            Assert.NotNull(_SystemUnderTest);
+
+            return _SystemUnderTest;
+        }
+    }
+
+
     [Fact]
     public void Add()
     {
@@ -12,10 +29,8 @@ public class CalculatorFixture
         var value2 = 2;
         var expected = 3;
 
-        var systemUnderTest = new Calculator();
-
         // Act
-        var actual = systemUnderTest.Add(value1, value2);
+        var actual = SystemUnderTest.Add(value1, value2);
 
         // Assert
         Assert.Equal(expected, actual);
@@ -29,10 +44,8 @@ public class CalculatorFixture
         var value2 = 3;
         var expected = 2;
 
-        var systemUnderTest = new Calculator();
-
         // Act
-        var actual = systemUnderTest.Subtract(value1, value2);
+        var actual = SystemUnderTest.Subtract(value1, value2);
 
         // Assert
         Assert.Equal(expected, actual);
@@ -48,10 +61,8 @@ public class CalculatorFixture
         var value2 = 3;
         var expected = 15;
 
-        var systemUnderTest = new Calculator();
-
         // Act
-        var actual = systemUnderTest.Multiply(value1, value2);
+        var actual = SystemUnderTest.Multiply(value1, value2);
 
         // Assert
         Assert.Equal(expected, actual);
@@ -65,10 +76,8 @@ public class CalculatorFixture
         var value2 = 2;
         var expected = 5;
 
-        var systemUnderTest = new Calculator();
-
         // Act
-        var actual = systemUnderTest.Divide(value1, value2);
+        var actual = SystemUnderTest.Divide(value1, value2);
 
         // Assert
         Assert.Equal(expected, actual);
@@ -81,20 +90,15 @@ public class CalculatorFixture
         var value1 = 10;
         var value2 = 0;
 
-        var systemUnderTest = new Calculator();
-
         // Act & Assert
-        Assert.Throws<DivideByZeroException>(() => systemUnderTest.Divide(value1, value2));
+        Assert.Throws<DivideByZeroException>(() => SystemUnderTest.Divide(value1, value2));
     }
 
     [Fact]
     public void Calculate_OnUnknownOperation_ThrowsException()
     {
-        // Arrange
-        var systemUnderTest = new Calculator();
-
-        // Act & Assert
-        Assert.Throws<InvalidOperationException>(() => systemUnderTest.Calculate("Unknown", 1, 2));
+        // Arrange & Act & Assert
+        Assert.Throws<InvalidOperationException>(() => SystemUnderTest.Calculate("Unknown", 1, 2));
     }
 
 
@@ -105,11 +109,8 @@ public class CalculatorFixture
     [InlineData("Divide", 10, 2, 5)]
     public void Calculate(string operation, int value1, int value2, int expected)
     {
-        // Arrange 
-        var systemUnderTest = new Calculator();
-
-        // Act
-        var actual = systemUnderTest.Calculate(operation, value1, value2);
+        // Arrange & Act
+        var actual = SystemUnderTest.Calculate(operation, value1, value2);
 
         // Assert
         Assert.Equal(expected, actual);
